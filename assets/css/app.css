@@ -39,7 +39,7 @@
 }
 
 .phx-modal-content {
-  background-color: #fefefe;
+  background-color: #1F2232;
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
@@ -47,7 +47,7 @@
 }
 
 .phx-modal-close {
-  color: #aaa;
+  color: #BC9EC1;
   float: right;
   font-size: 28px;
   font-weight: bold;

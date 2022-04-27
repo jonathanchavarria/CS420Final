@@ -3,7 +3,7 @@ import Config
 # Configure your database
 config :chirp, Chirp.Repo,
   username: "postgres",
-  password: "password",
+  password: "postgres",
   database: "chirp_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
@@ -52,7 +52,7 @@ config :chirp, ChirpWeb.Endpoint,
 config :chirp, ChirpWeb.Endpoint,
   live_reload: [
     patterns: [
-      ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
+      ~r"priv/static/(?!uploads).*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
       ~r"lib/chirp_web/(live|views)/.*(ex)$",
       ~r"lib/chirp_web/templates/.*(eex)$"
