@@ -42,6 +42,11 @@ defmodule ChirpWeb.UserLive.UserComponent do
             <% end %>
           </div>
         </div>
+
+        <span><%= link "Show", to: Routes.user_show_path(@socket, :show, @user) %></span>
+        <%= link to: "#", phx_click: "delete", phx_value_id: @user.id, data: [confirm: "Are you sure?"] do %>
+        <span>❌</span>
+        <% end %>
       </div>
 
 

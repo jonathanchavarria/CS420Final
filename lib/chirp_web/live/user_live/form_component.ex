@@ -68,6 +68,7 @@ defmodule ChirpWeb.UserLive.FormComponent do
 
       {:error, %Ecto.Changeset{} = changeset} ->
         {:noreply, assign(socket, changeset: changeset)}
+
     end
   end
   @spec ext(atom | %{:client_type => binary, optional(any) => any}) :: binary
