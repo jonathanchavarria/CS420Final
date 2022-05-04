@@ -63,6 +63,7 @@ body {
 }
 
 .photos {
+  padding-top :20px;
   display: flex;
   justify-content: center;
   padding-left: 40px;
@@ -71,7 +72,7 @@ body {
   flex-wrap: wrap;
   column-gap: 20px;
   row-gap: 20px;
-
+  max-width: 640px;
 
 }
 
