@@ -6,8 +6,13 @@ defmodule ChirpWeb.UserLive.FormComponent do
 
   @impl true
   def mount(socket) do
-    {:ok, allow_upload(socket, :photo, accept: ~w(.png .jpeg .jpg), max_entries: 1)}
+    {:ok,
+      socket
+      |> allow_upload(:photo, accept: ~w(.png .jpeg .jpg), max_entries: 1)
+      |> allow_upload(:image, accept: ~w(.png .jpeg .jpg), max_entries: 10)
+      }
   end
+
 
   @impl true
   def update(%{user: user} = assigns, socket) do
@@ -59,8 +64,7 @@ defmodule ChirpWeb.UserLive.FormComponent do
         {:noreply,
          socket
          |> put_flash(:info, "User created successfully")
-         |> push_redirect(to: Routes.user_show_path(socket, :show, socket.assigns.user))}
-
+         |> push_redirect(to: socket.assigns.return_to)}
 
       {:error, %Ecto.Changeset{} = changeset} ->
         {:noreply, assign(socket, changeset: changeset)}
@@ -78,15 +82,29 @@ defmodule ChirpWeb.UserLive.FormComponent do
       for entry <- completed do
         Routes.static_path(socket, "/uploads/#{entry.uuid}.#{ext(entry)}")
       end
+    {completed, []} = uploaded_entries(socket, :image)
 
-    %User{user | profile_pic: urls}
+    pageurls =
+      for entry <- completed do
+        Routes.static_path(socket, "/uploads/#{entry.uuid}.#{ext(entry)}")
+      end
+
+    %User{user | profile_pic: urls, photos: pageurls}
 
   end
+
 
   def consume_photos(socket, %User{} = user) do
     consume_uploaded_entries(socket, :photo, fn meta, entry ->
       dest = Path.join("priv/static/uploads", "#{entry.uuid}.#{ext(entry)}")
       File.cp!(meta.path, dest)
+
+    end)
+
+    consume_uploaded_entries(socket, :image, fn meta, entry ->
+      dest = Path.join("priv/static/uploads", "#{entry.uuid}.#{ext(entry)}")
+      File.cp!(meta.path, dest)
+
     end)
     {:ok, user}
   end

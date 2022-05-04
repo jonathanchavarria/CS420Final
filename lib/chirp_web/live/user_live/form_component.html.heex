@@ -12,9 +12,15 @@
     <%= for {_ref, msg} <- @uploads.photo.errors do %>
       <p class = "alert alert-danger"> <%= Phoenix.Naming.humanize(msg) %> </p>
     <% end %>
+    <%= for {_ref, msg} <- @uploads.image.errors do %>
+      <p class = "alert alert-danger"> <%= Phoenix.Naming.humanize(msg) %> </p>
+    <% end %>
 
     <%= label f, :profile_pic %>
     <%= live_file_input @uploads.photo %>
+    <%= for entry <- @uploads.photo.entries do %>
+      <%= live_img_preview entry, height: 80 %>
+    <% end %>
     <%= error_tag f, :profile_pic %>
 
 
@@ -31,8 +37,14 @@
     <%= label f, :bio %>
     <%= text_input f, :bio %>
     <%= error_tag f, :bio %>
+
+    <%= label f, :photos %>
+    <%= live_file_input @uploads.image %>
+    <%= for entry <- @uploads.image.entries do %>
+      <%= live_img_preview entry, height: 80 %>
+    <% end %>
+    <%= error_tag f, :photos %>
   
- 
     <div>
       <%= submit "Save", phx_disable_with: "Saving..." %>
     </div>
