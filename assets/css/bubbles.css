@@ -1,0 +1,20 @@
+img.bLeft {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+img.uLeft {
+    position: absolute;
+    top: 71px;
+    left: 0px;
+}
+img.uRight {
+    position: absolute;
+    top: 71px;
+    right: 0px;
+}
+img.bRight {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
