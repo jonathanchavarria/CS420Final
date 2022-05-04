@@ -11,12 +11,6 @@ body {
   filter: drop-shadow(0px 0px 25px #000000);
 }
 
-.photos{
-  background-color: #1F2232;
-  height: 400px;
-  margin-left: 40px;
-  margin-right: 40px;
-}
 .settings{
   display: flex;
   width: 100%;
@@ -45,8 +39,46 @@ body {
   min-height: 100% !important;
   overflow: hidden; 
 }
+
+.flex2 {
+  display: flex;
+  justify-content: center;
+  padding-left: 40px;
+  padding-right: 40px; 
+  /*filter: drop-shadow(0px 0px 25px #000000);*/
+  min-height: 100% !important;
+  overflow: hidden; 
+}
+
+
+.photobox{
+  display: flex;
+  /*filter: drop-shadow(0px 0px 25px #000000);*/
+  min-height: 100% !important;
+  overflow: hidden; 
+ 
+  max-width: 600px;
+  justify-content: center;
+
+}
+
+.photos {
+  display: flex;
+  justify-content: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  background: #1F2232;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 20px;
+
+
+}
+
 .user{
+  display: flex;
   filter: drop-shadow(0px 0px 25px #000000);
+  flex-direction: column;
 }
 .box {
   width: 200px;
