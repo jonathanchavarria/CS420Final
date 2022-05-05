@@ -2,19 +2,23 @@ img.bLeft {
     position: absolute;
     bottom: 0px;
     left: 0px;
+    z-index: -3;
 }
 img.uLeft {
     position: absolute;
     top: 71px;
     left: 0px;
+    z-index: -3;
 }
 img.uRight {
     position: absolute;
     top: 71px;
     right: 0px;
+    z-index: -3;
 }
 img.bRight {
     position: absolute;
     bottom: 0px;
     right: 0px;
+    z-index: -3;
 }
