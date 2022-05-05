@@ -6,9 +6,9 @@ body {
   
 }
 .NewUser{
-  width: 300px;
+  width: 700px;
   padding: 60px;
-  filter: drop-shadow(0px 0px 25px #000000);
+  text-align: center;
 }
 
 .settings{
@@ -47,22 +47,23 @@ body {
   padding-right: 40px; 
   /*filter: drop-shadow(0px 0px 25px #000000);*/
   min-height: 100% !important;
-  overflow: hidden; 
+  overflow: visible; 
+  
 }
 
+img {
+  transition:transform 0.25s ease;
+}
 
-.photobox{
-  display: flex;
-  /*filter: drop-shadow(0px 0px 25px #000000);*/
-  min-height: 100% !important;
-  overflow: hidden; 
- 
-  max-width: 600px;
-  justify-content: center;
+img:hover {
+  -webkit-transform:scale(3);
+  transform:scale(3);
 
 }
+
 
 .photos {
+
   padding-top :20px;
   display: flex;
   justify-content: center;
@@ -72,9 +73,12 @@ body {
   flex-wrap: wrap;
   column-gap: 20px;
   row-gap: 20px;
+  width: 100%;
   max-width: 640px;
+  min-width: 320px;
 
 }
+
 
 .user{
   display: flex;
@@ -151,6 +155,12 @@ body {
   text-shadow: -5px 0px #BC9EC1;
 }
 
+.vibelogo{
+  color: #FDE8E9;
+  font-size: 40px;
+  text-shadow: -5px 0px #BC9EC1;
+}
+
 .LoginBox {
   width: 300px;
   background-color: #1F2232;
@@ -158,7 +168,10 @@ body {
   filter: drop-shadow(0px 0px 25px #000000);
   
 }
-
+.name{
+  font-size: 16px;
+  color: #FDE8E9;
+}
 .BottomText{
   text-align:center;
 }
@@ -184,8 +197,9 @@ body {
   color: #FDE8E9;
   text-align:center;
 }
+
 input{
-   width: 290px;
+   width: 100%;
    height: 50px;
    text-align:center;
    background-color:#1F2232;
