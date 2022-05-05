@@ -1,5 +1,11 @@
+
+
 <div class="NewUser">
-  <h2><%= @title %></h2>
+<div class="vibelogo">
+  <b><i>VIBE</i></b>
+</div>
+  <div class= "name"> Create Account </div>
+  <br>
 
   <.form
     let={f}
@@ -16,29 +22,39 @@
       <p class = "alert alert-danger"> <%= Phoenix.Naming.humanize(msg) %> </p>
     <% end %>
 
-    <%= label f, :profile_pic %>
+  
+   
+   
+
+    <div class = "name">
+    Profile Picture
+    </div>
     <%= live_file_input @uploads.photo %>
+  
     <%= for entry <- @uploads.photo.entries do %>
       <%= live_img_preview entry, height: 80 %>
     <% end %>
     <%= error_tag f, :profile_pic %>
+    <br>
 
-
-    <%= label f, :full_name %>
-    <%= text_input f, :full_name %>
+    <br><br>
+    <%= text_input f, :full_name, placeholder: "Full Name" %>
     <%= error_tag f, :full_name %>
   
   
-    <%= label f, :username %>
-    <%= text_input f, :username %>
+    <br><br><br>
+    <%= text_input f, :username, placeholder: "Username"  %>
     <%= error_tag f, :username %>
   
 
-    <%= label f, :bio %>
-    <%= text_input f, :bio %>
+    <br><br><br>
+    <%= text_input f, :bio, placeholder: "Biography"  %>
     <%= error_tag f, :bio %>
-
-    <%= label f, :photos %>
+    <br>
+    <br>
+    <div class = "name">
+    Account Photos
+    </div>
     <%= live_file_input @uploads.image %>
     <%= for entry <- @uploads.image.entries do %>
       <%= live_img_preview entry, height: 80 %>

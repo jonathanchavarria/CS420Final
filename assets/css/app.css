@@ -27,6 +27,9 @@
 }
 
 .phx-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   opacity: 1!important;
   position: fixed;
   z-index: 1;
@@ -40,6 +43,8 @@
 }
 
 .phx-modal-content {
+  display: flex;
+  justify-content: center;
   background-color: #1F2232;
   margin: 15% auto;
   padding: 20px;
