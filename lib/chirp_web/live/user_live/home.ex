@@ -10,14 +10,20 @@ defmodule ChirpWeb.UserLive.Home do
 
   @impl true
   def render(assigns) do
+    IO.inspect(assigns)
     ~H"""
 
     <div class = "user">
-    <%= for user <- @users do %>
-       <img src={Enum.at(user.photos,0)} width="40" height="40" />
-    <% end %>
+      <div class="flex2">
+        <div class = "photos">
+          <%= for user <- @users do %>
+            <%= Enum.at(user.photos,0)
+                |> img_tag(class: "friendpics")
+                |> link(to: Routes.user_show_path(assigns.socket, :show, user)) %>
+            <% end %>
+        </div>
+      </div>
     </div>
-
 
     """
 

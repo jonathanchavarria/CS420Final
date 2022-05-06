@@ -5,6 +5,10 @@ body {
   font-family: Helvetica, sans-serif;
   
 }
+.friendpics{
+  width: 400px;
+  height: 400px;
+}
 .NewUser{
   width: 700px;
   padding: 60px;
@@ -55,11 +59,13 @@ img {
   transition:transform 0.25s ease;
 }
 
-img:hover {
+.profphotos:hover {
   -webkit-transform:scale(3);
   transform:scale(3);
 
 }
+
+
 
 
 .photos {

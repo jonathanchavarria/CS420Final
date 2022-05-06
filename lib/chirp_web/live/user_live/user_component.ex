@@ -38,7 +38,7 @@ defmodule ChirpWeb.UserLive.UserComponent do
         <div class="flex2">
           <div class = "photos">
             <%= for image <- @user.photos do %>
-              <img src={image} width="150" height="150" />
+              <img class="profphotos" src={image} width="150" height="150" />
             <% end %>
           </div>
         </div>
