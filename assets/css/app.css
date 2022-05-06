@@ -10,6 +10,14 @@
   margin: -1rem 0 2rem;
 }
 
+#topbutton{
+  transition: 0.4s;
+}
+
+#topbutton:hover {
+  color: #FDE8E9;
+}
+
 .phx-no-feedback.invalid-feedback, .phx-no-feedback .invalid-feedback {
   display: none;
 }
