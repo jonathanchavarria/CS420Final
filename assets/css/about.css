@@ -1,11 +1,32 @@
 .wordsjeff{
-    color: white;
+    color: #FDE8E9;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
 }
 
 .aboutTitlejeff{
     padding-top: 5px;
+}
+
+.wordsTitlejeff{
+    color: #FDE8E9;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.info{
+    font-size: small;
+    color: #FDE8E9;
+    font-family: 'Montserrat', sans-serif;
+}
+
+ul.info{
+    list-style-type: none;
+}
+
+p.info {
+    font-size: large;
+    margin-left: 20px;
 }
 
 .textboxjeff{
