@@ -1,0 +1,24 @@
+.wordsjeff{
+    color: white;
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+}
+
+.aboutTitlejeff{
+    padding-top: 5px;
+}
+
+.textboxjeff{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#boxjeff {
+    background-color: #1f2232;
+    height: 500px;
+    width: 500px;
+    margin: auto;
+    margin-top: 100px;
+    position: relative;
+    z-index: 10;
+    box-shadow: 300px, 30px, 40px, red;
+}

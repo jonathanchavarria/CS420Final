@@ -2,6 +2,7 @@
 @import "./phoenix.css";
 @import "./nprogress.css";
 @import "./bubbles.css";
+@import "./about.css";
 
 /* LiveView specific classes for your customizations */
 .invalid-feedback {
