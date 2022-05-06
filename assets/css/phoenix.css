@@ -2,7 +2,7 @@
 body {
   margin:0px;
   background-color: #596475;
-  font-family: Helvetica, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   
 }
 .friendpics{
@@ -156,6 +156,7 @@ img {
 
 .topnav a.vibe{
   flex: 1;
+  font-family: Helvetica, sans-serif;
   color: #FDE8E9;
   font-size: 40px;
   text-shadow: -5px 0px #BC9EC1;
@@ -163,6 +164,7 @@ img {
 
 .vibelogo{
   color: #FDE8E9;
+  font-family: Helvetica, sans-serif;
   font-size: 40px;
   text-shadow: -5px 0px #BC9EC1;
 }
