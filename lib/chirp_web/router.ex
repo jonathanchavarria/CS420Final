@@ -19,7 +19,8 @@ defmodule ChirpWeb.Router do
 
     live "/", PageLive, :index
     live "/about", PageLive.Home, :index
-
+    live "/friendmap", PageLive.Friend, :index
+    
     live "/posts", PostLive.Index, :index
     live "/posts/new", PostLive.Index, :new
     live "/posts/:id/edit", PostLive.Index, :edit
